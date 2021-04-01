@@ -1,3 +1,4 @@
+
 var stackarr=[];
 const top=-1;
 
@@ -54,6 +55,49 @@ function precedency(pre)
 function InfixtoPostfix()
 {
     var postfix=[];
+    var temp=0;
     push('@');
-    
-}
+    infixval= document.getElementById("infixvalue").nodeValue;
+    console.log(infixval);
+
+    for(const i=0;i<infixval.length();i++)
+    {
+        const el=infixval[i];
+        if(operator(el))
+        {
+            if (el ==')') {
+                while (stackarr[top] != "(") {
+                  postfix[temp++] = pop();
+                }
+          pop();
+            }
+            else if(el=='(')
+            {
+                push(el);
+            }
+
+            else if(precedency(el)>precedency(stackarr[top]))
+            {
+                push(el);
+            }
+            else
+            {
+                while(precedency(el)<=precedency(stackarr[top])&&top>-1)
+                {
+                     postfix[temp++]=pop();
+                }
+                push(el);
+            }
+        }
+        else{
+            postfix[temp++]=el;
+        }
+
+        
+    }
+    while(stackarr[top]!='@')
+    {
+        postfix[temp++]=pop();
+    }
+ }
+
