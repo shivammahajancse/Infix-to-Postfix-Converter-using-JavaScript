@@ -29,3 +29,24 @@ function operator(op)
     return false;
 }
 
+function precedency(pre)
+{
+    if(pre=='@' || pre=='(' || pre==')')
+    {
+        return 1;
+    }
+    else if(pre=='+' || pre=='-')
+    {
+        return 2;
+    }
+    else if (pre=='/' || pre=='*')
+    {
+        return 3;
+    }
+    else if(pre=='^')
+    {
+        return 4;
+    }
+    else
+    return 0;
+}
