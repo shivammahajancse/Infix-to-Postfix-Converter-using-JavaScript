@@ -1,0 +1,35 @@
+body
+{
+background-color: #ffc10729;
+}
+.container-fluid
+{
+    background-color: #6f459e;
+    justify-content: center;
+}
+.navbar-brand mb-0 h1
+{
+    color: black;
+   
+}
+.navbar-light .navbar-brand
+{
+    color: white;
+}
+.navbar navbar-light bg-light
+{
+    width: 100%;
+    
+}
+.navbar
+{
+    padding: 0%;
+}
+.navbar-brand
+{
+    font-size: 1.8rem;
+}
+.navbar-light .navbar-brand:hover
+{
+    color: white;
+}
