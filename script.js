@@ -1,21 +1,20 @@
-
 var stackarr=[];
-const top=-1;
+var topp=-1;
 
 function push(e)
 {
-   top++;
-   stackarr[top]=e;
+   topp++;
+   stackarr[topp]=e;
 }
 
 function pop()
 {
-    if(top==-1)
+    if(topp==-1)
     return 0;
     else
     {
-        var popped_ele=stackarr[top];
-        top--;
+        var popped_ele=stackarr[topp];
+        topp--;
         return popped_ele;
     }
 }
@@ -57,16 +56,16 @@ function InfixtoPostfix()
     var postfix=[];
     var temp=0;
     push('@');
-    infixval= document.getElementById("infixvalue").nodeValue;
+    infixval= document.getElementById("infixvalue").value;
     console.log(infixval);
 
-    for(const i=0;i<infixval.length();i++)
+    for(var i=0;i<infixval.length;i++)
     {
-        const el=infixval[i];
+        var el=infixval[i];
         if(operator(el))
         {
             if (el ==')') {
-                while (stackarr[top] != "(") {
+                while (stackarr[topp] != "(") {
                   postfix[temp++] = pop();
                 }
           pop();
@@ -76,13 +75,13 @@ function InfixtoPostfix()
                 push(el);
             }
 
-            else if(precedency(el)>precedency(stackarr[top]))
+            else if(precedency(el)>precedency(stackarr[topp]))
             {
                 push(el);
             }
             else
             {
-                while(precedency(el)<=precedency(stackarr[top])&&top>-1)
+                while(precedency(el)<=precedency(stackarr[topp])&&topp>-1)
                 {
                      postfix[temp++]=pop();
                 }
@@ -95,9 +94,12 @@ function InfixtoPostfix()
 
         
     }
-    while(stackarr[top]!='@')
+    while(stackarr[topp]!='@')
     {
         postfix[temp++]=pop();
     }
+    var st="";
+    for(var i=0;i<postfix.length;i++)st+=postfix[i];
+    console.log(st);
  }
-
+ 
