@@ -1,6 +1,6 @@
 body
 {
-background-color: #ffc10729;
+background-color: #ffecb5;
 }
 .container-fluid
 {
@@ -53,4 +53,20 @@ background-color: #ffc10729;
     border: 2px solid white;
     border-radius: 18px;
     margin-top: 2vw;
+}
+.btn1
+{
+    border: wheat;
+    background-color: #6f459e;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-top: 1.5vw;
+    width: 7vw;
+    height: 6vh;
+}
+button:hover
+{
+    background-color:#c694ff;
 }
