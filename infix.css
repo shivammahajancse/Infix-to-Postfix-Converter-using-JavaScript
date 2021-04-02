@@ -35,5 +35,22 @@ background-color: #ffc10729;
 }
 .inputdata
 {
-    justify-content: center;
+   text-align: center;
+   margin-top:30vh;
+}
+.span1
+{
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: black;
+}
+.input1
+{
+    width: 58vw;
+    text-align: center;
+    place-items: center;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 18px;
+    margin-top: 2vw;
 }
