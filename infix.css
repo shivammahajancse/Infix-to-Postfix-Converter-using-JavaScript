@@ -1,6 +1,6 @@
 body
 {
-background-color: #ffecb5;
+background-color: #fff0c3;
 }
 .container-fluid
 {
@@ -36,11 +36,11 @@ background-color: #ffecb5;
 .inputdata
 {
    text-align: center;
-   margin-top:30vh;
+   margin-top:21vh;
 }
 .span1
 {
-    font-size: 1.5vw;
+    font-size: 2vw;
     font-weight: 500;
     color: black;
 }
@@ -48,8 +48,9 @@ background-color: #ffecb5;
 {
     width: 58vw;
     text-align: center;
+    height: 3vw;
     place-items: center;
-    font-size: 18px;
+    font-size: 20px;
     border: 2px solid white;
     border-radius: 18px;
     margin-top: 2vw;
@@ -69,4 +70,12 @@ background-color: #ffecb5;
 button:hover
 {
     background-color:#c694ff;
+}
+input:focus
+{
+    outline: none;
+}
+.output
+{
+    text-align: center;
 }

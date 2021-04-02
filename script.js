@@ -100,6 +100,6 @@ function InfixtoPostfix()
     }
     var st="";
     for(var i=0;i<postfix.length;i++)st+=postfix[i];
-   document.
+   document.getElementById("text").innerHTML=st;
  }
  
